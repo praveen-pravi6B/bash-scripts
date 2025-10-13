@@ -34,16 +34,6 @@ This script converts all `.jpg` and `.jpeg` images in a directory to `.png` form
 
 *   `imagemagick`
 
-### `portfolio.sh`
-
-A simple script to display a portfolio of projects and skills.
-
-**Usage:**
-
-```bash
-./portfolio.sh
-```
-
 ### `tgupload.sh`
 
 This script uploads files from a specified folder to a Telegram chat.
