@@ -1,10 +1,22 @@
 #!/bin/bash
 
+# --- Load Environment Variables ---
+ENV_FILE="./.env"
+
+# Check if the .env file exists before sourcing
+if [ -f "$ENV_FILE" ]; then
+    echo "Loading environment variables from $ENV_FILE"
+    source "$ENV_FILE"
+else
+    echo "ERROR: $ENV_FILE not found. Exiting."
+    exit 1
+fi
+
 # Default values
 FOLDER_PATH=""
 CHAT_ID=""
 MESSAGE_THREAD_ID=""
-BOT_TOKEN="" # ***REPLACE WITH YOUR ACTUAL BOT TOKEN***
+BOT_TOKEN=$TG_UPLOAD_BOT_TOKEN # ***REPLACE WITH YOUR ACTUAL BOT TOKEN***
 SEND_AS_DOCUMENT=false
 
 # Function to display usage
