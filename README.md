@@ -74,6 +74,24 @@ This script converts a video to a sequence of images using `ffmpeg`.
 
 *   `ffmpeg`
 
+## Environment Variables
+
+Some scripts in this repository may require API keys, tokens, or other credentials to function. To manage these securely, this project uses a `.env` file.
+
+1.  **Create a `.env` file:** Copy the `env.sample` file to a new file named `.env`.
+    ```bash
+    cp env.sample .env
+    ```
+2.  **Add your credentials:** Open the `.env` file and replace the placeholder values with your actual credentials.
+
+**Note:** The `.env` file is included in `.gitignore` and should **never** be committed to the repository.
+
 ## Contributing
 
 Feel free to fork this repository and add your own scripts. Pull requests are welcome.
+
+If your script requires any keys, tokens, or other credentials, please:
+
+1.  Add the necessary environment variable(s) to the `env.sample` file with a placeholder value (e.g., `YOUR_API_KEY`).
+2.  Update your script to read the variable from the `.env` file.
+3.  Ensure you do not commit your own `.env` file.
