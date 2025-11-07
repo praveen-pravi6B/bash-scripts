@@ -2,6 +2,20 @@
 
 This repository is a collection of personal bash scripts for various tasks.
 
+## Making Scripts Executable
+
+Before running any of the scripts, you need to make them executable. You can do this using the `chmod` command:
+
+```bash
+chmod +x <script_name>.sh
+```
+
+For example, to make the `compress_images.sh` script executable, you would run:
+
+```bash
+chmod +x compress_images.sh
+```
+
 ## Scripts
 
 ### `compress_images.sh`
@@ -28,6 +42,26 @@ This script converts all `.jpg` and `.jpeg` images in a directory to `.png` form
 
 ```bash
 ./jpg2png.sh <directory_path>
+```
+
+**Dependencies:**
+
+*   `imagemagick`
+
+### `convert_images.sh`
+
+This script converts images from one format to another (e.g., JPG to PNG, PNG to WebP).
+
+**Usage:**
+
+```bash
+./convert_images.sh <source_directory> <destination_directory> <source_format> <destination_format>
+```
+
+**Example:**
+To convert all JPG images in `input_folder` to WebP in `output_folder`:
+```bash
+./convert_images.sh input_folder output_folder jpg webp
 ```
 
 **Dependencies:**
